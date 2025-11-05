@@ -2,9 +2,11 @@
 
 This folder contains the three datasets explored for this project. The data was originally sourced from **ServiceNow**, an IT Service Management (ITSM) platform. To protect sensitive information and maintain privacy, all identifiers and confidential fields have been anonymized or randomized, and certain date/time fields have been shifted. These modifications ensure that no real-world data can be traced, while still allowing the datasets to be used to test and demonstrate the concepts analyzed in this project. Any resemblance to actual events or individuals is entirely coincidental.
 
+---
+
 ### Datasets Included in This Folder:
 
-1. **Incident Data** (modified_incident_metric.csv)
+1. **Incident Data** (`modified_incident_metric.csv`)
    - **Number of Records:** 23,810
    - **Number of Columns:** 21
 
@@ -35,7 +37,30 @@ This folder contains the three datasets explored for this project. The data was 
       | **Start**              | Timestamp when the change occurred (shifted) |
       | **End**                | Timestamp when the change ended or was superseded (shifted) |
       </details>
+2. **Request Data** (`modified_sc_task.csv`)
+   - **Number of Records:** 31,963
+   - **Number of Columns:** 13
 
+      <details>
+         <summary>Click to expand/collapse column descriptions</summary>
+         
+      | Column Name           | Description |
+      |-----------------------|-------------|
+      | **Number**             | Unique identifier for each request (anonymized as `TASK######`) |
+      | **Requested For**      | Name of the person who requested (anonymized as a 6-character random string) |
+      | **Business Unit**      | Department associated with the requester (anonymized as `Department` plus 3 random letters) |
+      | **Assigned To**        | Person responsible for handling the request (anonymized as a 6-character random string) |
+      | **Assignment Group**   | Team responsible for the request (anonymized as `Team` plus 3 random letters) |
+      | **State**              | Current state of the request (e.g., New, In Progress, On Hold, Resolved, Closed) |
+      | **Priority**           | Request priority level (e.g., Low, Medium, High) |
+      | **Item**               | Item being requested (e.g., Monitor, Consultation, Software) |
+      | **Opened**             | Timestamp when the request was first opened (shifted) |
+      | **Created**            | Timestamp when the request was submitted (shifted) |
+      | **Updated**            | Timestamp of the most recent update to the request (shifted) |
+      | **Closed**             | Timestamp when the request was closed (shifted) |
+      | **Reassignment Count** | Number of times the `Assigned To` person or `Assignment Group` changed |
+      </details>
+         
 ---
 ### Data Transformation Summary
 
