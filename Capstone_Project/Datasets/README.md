@@ -51,7 +51,7 @@ This folder contains the three datasets explored for this project. The data was 
       | **Business Unit**      | Department associated with the requester (anonymized as `Department` plus 3 random letters) |
       | **Assigned To**        | Person responsible for handling the request (anonymized as a 6-character random string) |
       | **Assignment Group**   | Team responsible for the request (anonymized as `Team` plus 3 random letters) |
-      | **State**              | Current state of the request (e.g., New, In Progress, On Hold, Resolved, Closed) |
+      | **State**              | Current state of the request (e.g., Open, Work In Progress, Pending, Closed Complete) |
       | **Priority**           | Request priority level (e.g., Low, Medium, High) |
       | **Item**               | Item being requested (e.g., Monitor, Consultation, Software) |
       | **Opened**             | Timestamp when the request was first opened (shifted) |
@@ -60,7 +60,28 @@ This folder contains the three datasets explored for this project. The data was 
       | **Closed**             | Timestamp when the request was closed (shifted) |
       | **Reassignment Count** | Number of times the `Assigned To` person or `Assignment Group` changed |
       </details>
+3. **Interaction Data** (`modified_interaction.csv`)
+   - **Number of Records:** 32,000
+   - **Number of Columns:** 12
+
+      <details>
+         <summary>Click to expand/collapse column descriptions</summary>
          
+      | Column Name           | Description |
+      |-----------------------|-------------|
+      | **Number**             | Unique identifier for each request (anonymized as `IMS######`) |
+      | **Opened For**         | Name of the person who requested the interaction (anonymized as a 6-character random string) |
+      | **Business Unit**      | Department associated with the requester (anonymized as `Department` plus 3 random letters) |
+      | **Assigned To**        | Person responsible for handling the interaction (anonymized as a 6-character random string) |
+      | **Assignment Group**   | Team responsible for the interaction (anonymized as `Team` plus 3 random letters) |
+      | **State**              | Current state of the interaction (e.g., New, Work In Progress, On Hold, Closed Complete) |
+      | **Type**               | Communication channel (e.g., Chat, Email, Phone) |
+      | **Subtype**            | Interaction type (e.g., WiFi, Zoom, Call Disconnected) |     
+      | **Opened**             | Timestamp when the interaction was first opened (shifted) |
+      | **Created**            | Timestamp when the interaction was submitted (shifted) |
+      | **Updated**            | Timestamp of the most recent update to the interaction (shifted) |
+      | **Closed**             | Timestamp when the interaction was closed (shifted) |
+      </details>         
 ---
 ### Data Transformation Summary
 
